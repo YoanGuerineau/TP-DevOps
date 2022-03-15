@@ -1,0 +1,14 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "Use the given Dockerfile on the VM. As root, reach the folder where the Dockerfile is stored and run ```docker build -t my-app .```\r Once the image is built, run ```docker run -it --rm --name my-app-1 my-app```\r You need to add a port forwarding rule on VirtualBox from 127.0.0.1 port 8080 to the VM IP address on port 8080.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
