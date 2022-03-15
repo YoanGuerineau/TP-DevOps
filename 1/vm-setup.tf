@@ -8,9 +8,9 @@ terraform {
 }
 resource "virtualbox_vm" "node" {
   count     = 1
-  name      = format("node-%02d", count.index + 1)
-  image     = "../../6514227d-9dac-4248-b0ac-6d04488b0f68"
-  cpus      = 1
+  name      = "ubuntu-2004-vm"
+  image     = "https://app.vagrantup.com/generic/boxes/ubuntu2004/versions/3.6.10/providers/virtualbox.box"
+  cpus      = 2
   memory    = "4096 mib"
 
   network_adapter {
