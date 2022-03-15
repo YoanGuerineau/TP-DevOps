@@ -1,0 +1,17 @@
+version: "2"
+services:
+  reverse-proxy:
+    container_name: "reverse-proxy"
+    image: "nginx:latest"
+    volumes:
+      - "/tp/4/nginx.conf:/etc/nginx/nginx.conf"
+    ports:
+      - "80:80"
+    expose:
+      - "80"
+    networks:
+      - "node-network"
+
+networks:
+  node-network:
+    external: true

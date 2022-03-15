@@ -12,6 +12,8 @@ services:
       - "8080:8080"
     expose:
       - "8080"
+    networks:
+      - "node-network"
     command: bash -c "npm install && node index.js"
   my-app-2:
     container_name: "my-app-2"
@@ -25,4 +27,10 @@ services:
       - "8081:8081"
     expose:
       - "8081"
+    networks:
+      - "node-network"
     command: bash -c "npm install && node index.js"
+
+networks:
+  node-network:
+    external: true
