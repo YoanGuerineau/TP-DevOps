@@ -9,3 +9,4 @@ Run ```kubectl apply -f my-app-service.yml```.
 Check that everything is coming up using ```kubectl get svc```.
 Run ```kubectl create -f my-app-ingress.yml```.
 Check that everything is coming up using ```kubectl get ingress```.
+You also need to add ```127.0.0.1 my-app.local``` to you hosts file on your host machine and ```10.0.2.15 my-app.local``` on your VM.
