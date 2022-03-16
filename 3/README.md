@@ -6,3 +6,12 @@ Running ```docker ps```check if any my-app-X is running. If so, run ```docker st
 Copy all the folder content to /tp/3 on the VM. You also need to have all the content of the previous step on /tp/2. You should be able to run ```docker-compose up -d```.
 You can check if the two apps are up using ```docker ps```.
 To check that everything is working properly, check that you get the hello world pages on http://127.0.0.1:8080 and http://127.0.0.1:8081.
+For later usage we can generate images and push them over to docker hub:
+```
+docker commit my-app-1 <your_dockerhub_username>/my-app-1
+docker commit my-app-2 <your_dockerhub_username>/my-app-2
+docker login
+... type login/password as requested ...
+docker push <your_dockerhub_username>/my-app-1
+docker push <your_dockerhub_username>/my-app-2
+```
