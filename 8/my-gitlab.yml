@@ -1,0 +1,15 @@
+apiVersion: apps.gitlab.com/v1beta1
+kind: GitLab
+metadata:
+  name: my-gitlab
+spec:
+  chart:
+    version: "5.8.2" # Check for newer versions here https://gitlab.com/gitlab-org/cloud-native/gitlab-operator/-/blob/0.5.1/CHART_VERSIONS
+    values:
+      global:
+        hosts:
+          domain: my-gitlab.local
+        ingress:
+          configureCertmanager: true
+      certmanager-issuer:
+        email: yoan.guerineau@live.fr
